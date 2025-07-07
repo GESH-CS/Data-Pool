@@ -189,7 +189,7 @@ def get_supabase_client():
     """Get Supabase client for storage operations"""
     try:
         url = st.secrets["SUPABASE_URL"]
-        key = st.secrets.get["SUPABASE_ANON_KEY"]
+        key = st.secrets["SUPABASE_ANON_KEY"]
         
         if not url or not key:
             st.error("Supabase credentials not found!")
@@ -3138,7 +3138,7 @@ def show_admin_dashboard(username: str):
         with col2:
             st.metric("Total Files", total_files)
         with col3:
-            supabase_url = os.getenv("SUPABASE_URL", "").replace("https://", "").split(".")[0]
+            supabase_url = st.secrets.get("SUPABASE_URL", "").replace("https://", "").split(".")[0]
             if st.button("🔗 Open Supabase Dashboard"):
                 st.write(f"Go to: https://supabase.com/dashboard/project/{supabase_url}/storage/buckets")
 
