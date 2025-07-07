@@ -150,7 +150,8 @@ def get_db_connection():
                 database=st.secrets["connections"]["postgresql"]["database"],
                 user=st.secrets["connections"]["postgresql"]["username"],
                 password=st.secrets["connections"]["postgresql"]["password"],
-                port=st.secrets["connections"]["postgresql"]["port"]
+                port=st.secrets["connections"]["postgresql"]["port"],
+                sslmode='require'
             )
         else:
             st.error("No database configuration found!")
