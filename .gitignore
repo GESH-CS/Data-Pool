@@ -1,0 +1,25 @@
+<<<<<<< HEAD
+__pycache__/
+*.pyc
+.env
+*.db
+.streamlit/secrets.toml
+static/uploads/
+.DS_Store
+node_modules/
+*.log
+.vscode/
+.idea/
+=======
+__pycache__/
+*.pyc
+.env
+*.db
+.streamlit/secrets.toml
+static/uploads/
+.DS_Store
+node_modules/
+*.log
+.vscode/
+.idea/
+>>>>>>> 3fe28e03ff6a483f632950cb2b61a8b287f563fb

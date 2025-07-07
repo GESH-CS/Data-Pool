@@ -1,0 +1,14 @@
+[server]
+headless = true
+enableCORS = false
+enableXsrfProtection = false
+maxUploadSize = 200
+port = 8501
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 3fe28e03ff6a483f632950cb2b61a8b287f563fb
+[browser]
+gatherUsageStats = false
