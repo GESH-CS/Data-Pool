@@ -146,11 +146,11 @@ def get_db_connection():
         # Fallback to Streamlit secrets (Streamlit Cloud)
         if hasattr(st, 'secrets') and 'connections' in st.secrets:
             conn = psycopg2.connect(
-                host=st.secrets["connections.postgresql"]["host"],
-                database=st.secrets["connections.postgresql"]["database"],
-                user=st.secrets["connections.postgresql"]["username"],
-                password=st.secrets["connections.postgresql"]["password"],
-                port=st.secrets["connections.postgresql"]["port"]
+                host=st.secrets["connections"]["postgresql"]["host"],
+                database=st.secrets["connections"]["postgresql"]["database"],
+                user=st.secrets["connections"]["postgresql"]["username"],
+                password=st.secrets["connections"]["postgresql"]["password"],
+                port=st.secrets["connections"]["postgresql"]["port"]
             )
         else:
             st.error("No database configuration found!")
